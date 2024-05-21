@@ -72,53 +72,85 @@
 
 /* __Header Section__*/
 
-header {
+.menu{
+    width: 100%;
+    height: fit-content;
+    background-color: #f3f3f3ff;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #f3f3f3;
-    /* background-color: #ffffff; */
-    color: #505050;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    border-bottom: 1px solid #767676;
+    box-sizing: border-box;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 2mm;
+    position: relative;
 }
 
-.brand-name>img {
+.brand-name>img{
     width: 180px;
-    padding-left: 40px;
 }
 
-.nav {
+.right{
     display: flex;
-    margin-right: 200px;
     align-items: center;
-    font-size: 20px;
 }
 
-.nav li {
-    margin: 0 20px;
-    list-style-type: none;
-}
-
-.nav>li>a {
+.head{
     text-decoration: none;
-    color: black;
+    font-size: 16px;
+    color: #131316;
+    margin: 0 20px;
 }
 
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+.head:hover{
+    border-bottom:0.6mm solid red;
+    color: crimson;
+}
+
+.right button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.hamburger {
-    width: 25px;
-    height: 0px;
-    margin: 35px 10px;
-    font-size: 1.5rem;
+.right button:hover{
+    background: rgb(255, 233, 233);
+    color: red;
+}
+
+.sub-menu{
+    position: absolute;
+    top: 120px;
+    right: 0px;
+    width: 200px;
+    height: fit-content;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(228, 4, 4, 0.857);
+    border-radius: 2mm;
+    padding: 10px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.27) 0px 15px 38px, rgba(0, 0, 0, 0.2) 0px, 10px, 12px;
+}
+
+.option{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 0;
+}
+
+.option:hover{
+    background: #f3f3f3;
+    color: rgb(84, 1, 1);
 }
 
 /* __hero/main__*/
@@ -297,37 +329,7 @@ header {
     /* Header */
     
 
-    .nav {
-        display: none;
-        flex-direction: column;
-        margin-right: 2px;
-        width: 0;
-        align-items: end;
-    }
 
-    .brand-name>img {
-        width: 150px;
-        padding-left: 0px;
-    }
-
-    .nav-list {
-        flex-direction: column;
-    }
-
-    .nav-links {
-        margin: 0;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-
-    .nav-active {
-        display: flex;
-    }
-    
 
 
     /* main-sec */

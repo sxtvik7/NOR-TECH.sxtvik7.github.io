@@ -1,3 +1,4 @@
+
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry)=>{
         console.log(entry)
@@ -14,38 +15,35 @@ const hiddenElements = document.querySelectorAll(".hide");
 hiddenElements.forEach((el) => observer.observe(el));
 
 
+// Scroll to reveal
 function scrollToTop() {
     window.scrollTo(0, 0);
 }
 
 window.onload = scrollToTop;
 
-
+// Smooth Scroll
 document.addEventListener('DOMContentLoaded', function() {
-    var links = document.querySelectorAll('.nav a');
+    var links = document.querySelectorAll('.right a, .sub-menu a, .option');
 
     links.forEach(function(link) {
         link.addEventListener('click', function(event) {
             event.preventDefault();
 
             var targetId = this.getAttribute('href');
+            var targetElement = document.querySelector(targetId);
 
-            // Scroll to the target section
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
-
-    var navToggle = document.querySelector('.nav-toggle');
-    var nav = document.querySelector('.nav');
-
-    navToggle.addEventListener('click', function() {
-        nav.classList.toggle('nav-active');
-    });
-
 });
 
+
+// Toggle menu
 let subMenu = document.querySelector(".sub-menu");
 
 window.addEventListener("click", (e)=>{

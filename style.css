@@ -82,9 +82,12 @@
     padding: 10px;
     box-sizing: border-box;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
-    border-radius: 2mm;
-    position: relative;
+    /* border-radius: 2mm; */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
+
 
 .brand-name>img{
     width: 180px;
@@ -93,11 +96,13 @@
 .right{
     display: flex;
     align-items: center;
+    padding-right: 100px;
 }
+
 
 .head{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1.3rem;
     color: #131316;
     margin: 0 20px;
 }
@@ -139,7 +144,7 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.27) 0px 15px 38px, rgba(0, 0, 0, 0.2) 0px, 10px, 12px;
 }
 
-.option{
+.option, .sub{
     width: 100%;
     text-align: center;
     text-decoration: none;
@@ -148,9 +153,13 @@
     padding: 10px 0;
 }
 
-.option:hover{
+.option:hover,.sub:hover{
     background: #f3f3f3;
     color: rgb(84, 1, 1);
+}
+
+.sub{
+    display: none;
 }
 
 /* __hero/main__*/
@@ -322,14 +331,27 @@
 
 /* Media Querry */
 
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 599px) {
 
     /* *{border: 1px solid red;  } */
 
     /* Header */
     
+    .head{
+        display: none;
+    }
+    .sub{
+        display: block;
+    }
+    .right{
+        display: flex;
+        align-items: center;
+        padding-right: 0px;
+    }
 
-
+    .brand-name>img{
+        width: 150px;
+    }
 
 
     /* main-sec */
@@ -375,7 +397,7 @@
     .services>h2 {
         margin-top: 70px;
         text-align: left;
-        font-size: 3.5rem;
+        font-size: 3.1rem;
         padding-left: 20px;
     }
 

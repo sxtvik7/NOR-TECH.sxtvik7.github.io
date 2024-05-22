@@ -243,23 +243,30 @@
 
 .services {
     padding-top: 80px;
+    align-content: center;
 }
 
 .service {
     margin: 50px 25px;
     display: flex;
-    /* align-items: center; */
+    background-color: #f3f3f3ff;
+    width: 80%;
+    margin-left: 170px;
 }
+
+
 
 .service-img {
     width: 350px;
     margin-left: 20px;
+    padding: 20px;
 }
 
 .service-img-puz {
     margin-top: 40px;
     width: 350px;
     height: 200px;
+    padding: 20px;
     margin-left: 20px;
 }
 
@@ -270,13 +277,13 @@
 
 .Service-info>h4 {
     color: #131316;
-    font-size: 3rem;
+    font-size: 2.5rem;
     display: inline-block;
 }
 
 .Service-info>p {
     color: #656565;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     width: 90%;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -285,6 +292,16 @@
 .service-puz {
     margin-top: 90px;
     display: flex
+}
+
+.learn-more > a{
+    background: rgb(255, 62, 62);
+    padding: 10px;
+    color: #fff;   
+    text-decoration: none;
+}
+.learn-more>a:hover{
+    background-color:rgb(207, 57, 57);
 }
 
 /* contact */

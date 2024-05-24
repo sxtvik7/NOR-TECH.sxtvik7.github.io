@@ -54,3 +54,20 @@ window.addEventListener("click", (e)=>{
     }
 })
 
+
+// Function to check screen size and remove class
+function checkScreenSize() {
+    const h2Element = document.getElementById('our-service');
+    if (window.innerWidth <= 699) {
+      h2Element.classList.remove('scroll-reveal');
+    } else {
+      h2Element.classList.add('scroll-reveal');
+    }
+  }
+  
+  // Initial check
+  checkScreenSize();
+  
+  // Add event listener for window resize
+  window.addEventListener('resize', checkScreenSize);
+  

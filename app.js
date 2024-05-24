@@ -64,10 +64,6 @@ function checkScreenSize() {
       h2Element.classList.add('scroll-reveal');
     }
   }
-  
-  // Initial check
   checkScreenSize();
-  
-  // Add event listener for window resize
   window.addEventListener('resize', checkScreenSize);
   

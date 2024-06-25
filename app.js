@@ -16,11 +16,11 @@ hiddenElements.forEach((el) => observer.observe(el));
 
 
 // Scroll to reveal
-function scrollToTop() {
-    window.scrollTo(0, 0);
-}
+// function scrollToTop() {
+//     window.scrollTo(0, 0);
+// }
 
-window.onload = scrollToTop;
+// window.onload = scrollToTop;
 
 // Smooth Scroll
 document.addEventListener('DOMContentLoaded', function() {
@@ -56,14 +56,14 @@ window.addEventListener("click", (e)=>{
 
 
 // Function to check screen size and remove class
-function checkScreenSize() {
-    const h2Element = document.getElementById('our-service');
-    if (window.innerWidth <= 699) {
-      h2Element.classList.remove('scroll-reveal');
-    } else {
-      h2Element.classList.add('scroll-reveal');
-    }
-  }
-  checkScreenSize();
-  window.addEventListener('resize', checkScreenSize);
+// function checkScreenSize() {
+//     const h2Element = document.getElementById('our-service');
+//     if (window.innerWidth <= 699) {
+//       h2Element.classList.remove('scroll-reveal');
+//     } else {
+//       h2Element.classList.add('scroll-reveal');
+//     }
+//   }
+//   checkScreenSize();
+//   window.addEventListener('resize', checkScreenSize);
   

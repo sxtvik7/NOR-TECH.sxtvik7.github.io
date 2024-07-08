@@ -230,12 +230,19 @@
     margin-top: 50px;
     text-align: center;
     font-size: 3.5rem;
-    font-weight: 500;
+    background-color: #f9f9f9;
+    font-weight: bold; 
+    color: #ff3131; 
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    padding: 10px 0;
 }
 
 .about,
 .client {
-    margin: 80px;
+    margin: 70px;
 }
 
 .about,
@@ -245,12 +252,14 @@
 
 .about h3,
 .client h3 {
+    width: 100%;
     font-size: 30px;
     color: #131316;
     margin-top: 20px;
 }
 
 .about h3 p {
+    width: 100%;
     padding-top: 10px;
     color: #131316;
     font-size: 27px;
@@ -259,7 +268,7 @@
 
 /* Services */
 /* *{border: 1px solid red;} */
-#our-service{
+#our-service {
     margin-bottom: 40px;
 }
 
@@ -298,35 +307,39 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 
 .service-container .wrapper {
     display: inline-block;
     width: 100%;
-    padding: 0px 75px;
+    padding: 20px;
+    background: hsla(0, 0%, 75.3%, .1);
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-container .img-wrapper {
-    width: 160px;
+    width: 290px;
     height: 160px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .service-container .img-wrapper img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
     max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
 }
 
-.service-container .img-wrapper .three-lev-park {
-    width: 150px;
-    padding-left: 20px;
-}
-
-.service-container .img-wrapper .puz-park {
+.puz-img {
+    width: 250px;
     height: 120px;
-    width: 160px;
 }
 
 .service-container .description {
@@ -334,7 +347,8 @@
     width: 100%;
     padding: 25px 30px 55px;
     position: relative;
-    background: hsla(0, 0%, 75.3%, .1);
+    flex-grow: 1;
+    /* background: hsla(0, 0%, 75.3%, .1); */
 }
 
 .service-container .heading {
@@ -367,6 +381,7 @@
     padding-right: 40px;
     display: inline-block;
     transition: opacity 0.2s ease;
+    margin-top: auto;
 }
 
 .service-container:hover .learn-more {
@@ -375,11 +390,12 @@
 
 /* contact */
 
-*{border: 1px solid red;}
+/* *{border: 1px solid red;} */
 
 .contact-sec {
-    height: 82vh;
+    /* height: 99vh; */
     border-top: 1px solid #959494;
+    padding-bottom: 40px;
 }
 
 .contact-para>p {
@@ -417,7 +433,7 @@
 }
 
 .contact-item p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 0;
 }
 
@@ -432,7 +448,79 @@
 
 /* Media Querry */
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
+  
+
+    .service-grid .service-container {
+        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
+    }
+
+    .content h3 {
+        font-size: 60px;
+    }
+
+    .content h4 {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 999px) {
+
+
+    .about h3,
+    .client h3 {
+        font-size: 23px;
+    }
+
+    .about h3 p {
+        font-size: 20px;
+    }
+
+    .about {
+        margin: 70px 70px 20px 70px;
+    }
+
+    .client {
+        margin-top: 0px;
+    }
+
+    .service-container .learn-more {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 760px) {
+
+    .content h3 {
+        font-size: 40px;
+    }
+
+    .content h4 {
+        font-size: 19px;
+        width: 290px;
+    }
+
+    .about-sec>h2,
+    .services>h2,
+    .contact-sec>h2 {
+        font-size: 2.5rem;
+    }
+
+    .about,
+    .client {
+        margin: 40px 50px;
+    }
+
+    .about h3,
+    .client h3 {
+        font-size: 23px;
+    }
+
+    .about h3 p {
+        font-size: 20px;
+    }
 
 
     /* Header */
@@ -454,8 +542,58 @@
         width: 150px;
     }
 
+    /* services */
+
+    .service-grid .service-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+
     /* Contact */
     .contact-sec>h2 {
         font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about h3,
+    .client h3 {
+        font-size: 20px;
+    }
+
+    .about h3 p {
+        font-size: 17px;
+    }
+
+    .about,
+    .client {
+        margin: 20px 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .content h3 {
+        font-size: 30px;
+    }
+
+    .content h4 {
+        font-size: 15px;
+    }
+
+    .about h3,
+    .client h3 {
+        font-size: 18px;
+    }
+
+    .about h3 p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services>h2{
+        font-size: 2rem;
     }
 }

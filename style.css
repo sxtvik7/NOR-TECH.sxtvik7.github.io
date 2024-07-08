@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    box-sizing: border-box;
     /* border: 1px solid red;   */
 }
 
@@ -61,7 +62,7 @@
     background-image: linear-gradient(90deg, black, black);
     animation: scroll-reveal 1s linear forwards;
     animation-timeline: view();
-}
+} */
 
 @keyframes scroll-reveal {
     to {
@@ -166,31 +167,51 @@
 /* __hero/main__*/
 
 .hero {
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero h1 {
-    font-size: 4.5rem;
-    color: #343434;
-}
-
-.hero h3 {
-    font-size: 1.7rem;
-    color: #353434;
+    height: 70vh;
+    /* padding-top: 10px; */
+    padding-bottom: 100px;
 }
 
 .img-sec {
-    background-color: #f3f3f3;
+    background-image: url("img/parking-pro.webp");
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    /* padding: 0 60px; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.img-sec img {
-    border-radius: 10px;
-    margin: 0px 2px;
+.img-sec::after {
+    content: "";
+    position: absolute;
     width: 100%;
+    height: 80vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h3 {
+    color: #f3f3f3;
+    font-size: 80px;
+}
+
+.content h4 {
+    color: #f3f3f3;
+    font-size: 30px;
+    margin-top: 10px;
 }
 
 /* About_sec */
@@ -208,13 +229,20 @@
 .contact-sec>h2 {
     margin-top: 50px;
     text-align: center;
-    font-size: 5.5rem;
-    font-weight: 500;
+    font-size: 3.5rem;
+    background-color: #f9f9f9;
+    font-weight: bold; 
+    color: #ff3131; 
+    margin-bottom: 20px;
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    padding: 10px 0;
 }
 
 .about,
 .client {
-    margin: 80px;
+    margin: 70px;
 }
 
 .about,
@@ -222,107 +250,152 @@
     font-size: 25px;
 }
 
-.about h3 {
+.about h3,
+.client h3 {
+    width: 100%;
     font-size: 30px;
     color: #131316;
     margin-top: 20px;
 }
 
 .about h3 p {
+    width: 100%;
     padding-top: 10px;
-    color: #767676;
-    font-size: 25px;
+    color: #131316;
+    font-size: 27px;
 }
 
-.client h3 {
-    font-size: 30px;
-    color: #131316;
-    margin-top: 20px;
-}
 
 /* Services */
-
-.services {
-    padding-top: 80px;
-    align-content: center;
+/* *{border: 1px solid red;} */
+#our-service {
+    margin-bottom: 40px;
 }
 
-.service {
-    margin: 50px 25px;
+.service-grid {
     display: flex;
-    width: 80%;
-    margin-left: 120px;
+    flex-wrap: wrap;
 }
 
-.service-2 {
-    margin: 50px 25px;
-    width: 80%;
-    margin-left: 120px;
-}
-
-.container {
-    background-color: #f3f3f3ff;
-    height: 50vh;
-    padding: 20px;
-}
-
-.float-right {
-    float: right;
-}
-
-.service-img {
-    width: 300px;
-    margin-left: 20px;
-}
-
-.service-img-greybc {
-    width: 250px;
-    margin-left: 20px;
-}
-
-.service-img-puz {
-    margin-top: 40px;
-    width: 350px;
-    height: 200px;
-    padding: 20px;
-    margin-left: 20px;
-}
-
-.Service-info {
-    padding-left: 50px;
-    padding-top: 20px;
-}
-
-.Service-info>h4 {
-    color: #131316;
-    font-size: 2.5rem;
-}
-
-.Service-info>p {
-    color: #656565;
-    font-size: 1.3rem;
-    width: 95%;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-
-.learn-more>a {
-    background: rgb(255, 62, 62);
-    padding: 10px;
-    color: #fff;
+.service-grid a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
     text-decoration: none;
+    box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .02);
 }
 
-.learn-more>a:hover {
-    background-color: rgb(207, 57, 57);
+.service-container {
+    width: 33.333333%;
+    max-width: 33.333333%;
+    min-width: 33.333333%;
+    padding: 15px;
+    position: relative;
+}
+
+.service-container a:hover {
+    box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .06);
+    border-bottom: 3px solid #ff3131;
+}
+
+.service-container .inner-container {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.service-container .wrapper {
+    display: inline-block;
+    width: 100%;
+    padding: 20px;
+    background: hsla(0, 0%, 75.3%, .1);
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container .img-wrapper {
+    width: 290px;
+    height: 160px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-container .img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
+}
+
+.puz-img {
+    width: 250px;
+    height: 120px;
+}
+
+.service-container .description {
+    display: inline-block;
+    width: 100%;
+    padding: 25px 30px 55px;
+    position: relative;
+    flex-grow: 1;
+    /* background: hsla(0, 0%, 75.3%, .1); */
+}
+
+.service-container .heading {
+    font-size: 22px;
+    line-height: 33px;
+    color: #ff3131;
+    margin-bottom: 10px;
+    letter-spacing: .02em;
+}
+
+.service-container p {
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: .03em;
+    margin-bottom: 20px;
+    color: #7e7e7e;
+    margin: 0 0 10px;
+}
+
+.service-container .learn-more {
+    position: absolute;
+    bottom: 28px;
+    left: 30px;
+    color: #ff3131;
+    opacity: 0;
+    font-size: 13px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-right: 40px;
+    display: inline-block;
+    transition: opacity 0.2s ease;
+    margin-top: auto;
+}
+
+.service-container:hover .learn-more {
+    opacity: 1;
 }
 
 /* contact */
 
+/* *{border: 1px solid red;} */
+
 .contact-sec {
-    height: 82vh;
+    /* height: 99vh; */
     border-top: 1px solid #959494;
+    padding-bottom: 40px;
 }
 
 .contact-para>p {
@@ -360,7 +433,7 @@
 }
 
 .contact-item p {
-    font-size: 1.2em;
+    font-size: 1em;
     margin: 0;
 }
 
@@ -375,91 +448,79 @@
 
 /* Media Querry */
 
+@media screen and (max-width: 1200px) {
+  
 
-@media screen and (max-width: 1300px) {
-
-
-    .container {
-        background-color: #f3f3f3ff;
-        height: 40vh;
-        padding: 20px;
+    .service-grid .service-container {
+        width: 50%;
+        max-width: 50%;
+        min-width: 50%;
     }
 
-    .Service-info {
-        padding-left: 50px;
-        padding-top: 20px;
+    .content h3 {
+        font-size: 60px;
     }
 
-    .services>h2 {
-        font-size: 4rem;
+    .content h4 {
+        font-size: 25px;
     }
 }
 
-@media screen and (max-width: 1025px) {
-    .Service-info {
-        padding-top: 0px;
+@media screen and (max-width: 999px) {
+
+
+    .about h3,
+    .client h3 {
+        font-size: 23px;
     }
 
-    .container {
-        height: 45vh;
-        padding: 10px;
+    .about h3 p {
+        font-size: 20px;
     }
 
-    .service {
-        margin-left: 0px;
-        width: 95%;
+    .about {
+        margin: 70px 70px 20px 70px;
     }
 
-    .service-2 {
-        margin-left: 0px;
-        width: 95%;
+    .client {
+        margin-top: 0px;
+    }
+
+    .service-container .learn-more {
+        opacity: 1;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 760px) {
+
+    .content h3 {
+        font-size: 40px;
+    }
+
+    .content h4 {
+        font-size: 19px;
+        width: 290px;
+    }
 
     .about-sec>h2,
     .services>h2,
     .contact-sec>h2 {
-        margin-top: 50px;
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 500;
+        font-size: 2.5rem;
     }
 
-    .container {
-        height: 40vh;
-        padding: 10px;
+    .about,
+    .client {
+        margin: 40px 50px;
     }
 
-    .Service-info>h4 {
-        font-size: 2rem;
+    .about h3,
+    .client h3 {
+        font-size: 23px;
     }
 
-    .Service-info>p {
-        font-size: 1.2rem;
+    .about h3 p {
+        font-size: 20px;
     }
-
-    .service-img {
-        width: 220px;
-        margin-left: 20px;
-    }
-
-    .service-img-greybc {
-        width: 200px;
-        margin-left: 20px;
-    }
-
-
-    .service-img-puz {
-        margin-top: 0px;
-        width: 270px;
-        height: 120px;
-        margin-left: 20px;
-    }
-}
-
-@media screen and (max-width: 699px) {
 
 
     /* Header */
@@ -481,92 +542,14 @@
         width: 150px;
     }
 
-    /* main-sec */
-    .hero h1 {
-        font-size: 3rem;
+    /* services */
+
+    .service-grid .service-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
     }
 
-    .hero h3 {
-        font-size: 1.1rem;
-    }
-
-    /* About */
-    .about-sec>h2 {
-        margin-top: 70px;
-        text-align: center;
-        font-size: 3.5rem;
-    }
-
-    .about,
-    .client {
-        margin: 20px;
-    }
-
-    .about h3 {
-        font-size: 1.3rem;
-        margin-top: 50px;
-    }
-
-    .about h3 p {
-        font-size: 1.3rem;
-    }
-
-    .client h3 {
-        font-size: 1.3rem;
-        margin-top: 50px;
-    }
-
-    /* Services */
-    .services>h2 {
-        margin-top: 70px;
-        text-align: center;
-        font-size: 3rem;
-        padding-left: 0px;
-    }
-
-    .services {
-        padding-top: 70px;
-    }
-
-    .container {
-        height: 34vh;
-    }
-
-    .service {
-        margin: 50px 0px;
-        display: flex;
-    }
-
-    .service-img {
-        width: 200px;
-        margin-left: 10px;
-    }
-
-    .service-img-puz {
-        margin-left: 10px;
-    }
-
-    .Service-info {
-        padding-bottom: 20px;
-        padding-left: 20px;
-    }
-
-    .Service-info>h4 {
-        font-size: 1.7rem;
-    }
-
-    .Service-info>p {
-        font-size: 0.8rem;
-        margin-bottom: 10px;
-    }
-
-    .learn-more>a {
-        background: rgb(255, 62, 62);
-        padding: 5px;
-        color: #fff;
-        text-decoration: none;
-        font-size: .8rem;
-    }
 
     /* Contact */
     .contact-sec>h2 {
@@ -574,134 +557,43 @@
     }
 }
 
-@media screen and (max-width: 569px) {
-
-    .about-sec>h2{
-        font-size: 3rem
+@media screen and (max-width: 600px) {
+    .about h3,
+    .client h3 {
+        font-size: 20px;
     }
 
-    .services>h2 {
-        font-size: 2.7rem;
-        padding-left: 0px;
+    .about h3 p {
+        font-size: 17px;
     }
 
-    .service {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        padding: 20px;
-    }
-
-    .service-2 {
-        margin: 0px 2px;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .Service-info>h4 {
-        font-size: 1.5rem;
-    }
-
-    .Service-info>p {
-        font-size: 1rem;
-    }
-
-    .container {
-        height: 50vh;
-    }
-
-    .service-img {
-        width: 200px;
-        margin-bottom: 20px;
-    }
-
-    .service-img-greybc {
-        width: 175px;
-        margin-bottom: 20px;
-
-    }
-
-    .service-img-puz {
-        margin-bottom: 20px;
-    }
-
-    .contact-sec {
-        height: 120vh;
+    .about,
+    .client {
+        margin: 20px 30px;
     }
 }
 
-@media screen and (max-width: 399px){
-
-    .hero h1 {
-        font-size: 2.5rem;
+@media screen and (max-width: 480px) {
+    .content h3 {
+        font-size: 30px;
     }
 
-    .hero h3 {
-        font-size: 1rem;
-        text-align: center;
+    .content h4 {
+        font-size: 15px;
     }
 
-    .service {
-        padding: 25px;
+    .about h3,
+    .client h3 {
+        font-size: 18px;
     }
 
-    .container {
-        height: 65vh;
-        padding: 25px;
-    }
-
-    .Service-info>p {
-        margin-bottom: 20px;
-    }
-
-    .service-img-puz {
-        margin-top: 0px;
-        padding: 20px;
-        margin-left: 0px;
-    }
-
-    .contact-sec {
-        height: 140vh;
-    } 
-}
-
-@media screen and (max-width: 360px){
-
-    .about-sec>h2{
-        font-size: 2.5rem
-    }
-
-
-    .service {
-        padding: 10px;
-    }
-
-    .service-2 {
-        padding: 0px;
-    }
-
-    .container {
-        height: 63vh;
-        padding: 10px;
-    }
-
-
-    .service-img-puz {
-        margin-top: 30px;
-        padding: 10px;
-        margin-left: 0px;
-    }
-
-    .contact-sec>h2{
-        font-size: 2.9rem;
+    .about h3 p {
+        font-size: 15px;
     }
 }
 
-@media screen and (max-width: 320px){
-    .container {
-        height: 95vh;
-        padding: 25px;
-    }  
+@media screen and (max-width: 480px) {
+    .services>h2{
+        font-size: 2rem;
+    }
 }

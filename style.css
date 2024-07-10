@@ -550,6 +550,10 @@
         min-width: 100%;
     }
 
+    .service-grid a {
+        box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .06);
+    }
+
 
     /* Contact */
     .contact-sec>h2 {

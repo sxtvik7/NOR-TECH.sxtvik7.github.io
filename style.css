@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
 * {
+    /* border: 1px solid red;   */
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: sans-serif;
+    font-style: normal;
     font-weight: 400;
     box-sizing: border-box;
-    /* border: 1px solid red;   */
 }
 
 .hide {
@@ -54,16 +58,6 @@
     }
 }
 
-/* .scroll-reveal {
-    color: hsl(0 0% 80% / 0.2);
-    background-clip: text;
-    background-repeat: no-repeat;
-    background-size: 0% 100%;
-    background-image: linear-gradient(90deg, black, black);
-    animation: scroll-reveal 1s linear forwards;
-    animation-timeline: view();
-} */
-
 @keyframes scroll-reveal {
     to {
         background-size: 100% 100%;
@@ -90,7 +84,7 @@
 
 
 .brand-name>img {
-    width: 180px;
+    width: 170px;
 }
 
 .right {
@@ -206,6 +200,10 @@
 .content h3 {
     color: #f3f3f3;
     font-size: 80px;
+    font-family: 'NasalizationRg-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('NasalizationRg-Regular'), url('nasalization rg.woff') format('woff');
 }
 
 .content h4 {
@@ -215,6 +213,8 @@
 }
 
 /* About_sec */
+
+
 
 .about-sec,
 .services,
@@ -231,13 +231,12 @@
     text-align: center;
     font-size: 3.5rem;
     background-color: #f9f9f9;
-    font-weight: bold; 
-    /* color: #ff3131;  */
+    font-weight: 600;
     margin-bottom: 20px;
-    text-transform: uppercase; 
-    letter-spacing: 1.5px; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
     padding: 10px 0;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
 }
 
 .about,
@@ -252,17 +251,19 @@
 
 .about h3,
 .client h3 {
-    width: 100%;
-    font-size: 30px;
+    width: 90%;
+    font-size: 27px;
     color: #131316;
     margin-top: 20px;
 }
 
-.about h3 p {
-    width: 100%;
-    padding-top: 10px;
-    color: #131316;
-    font-size: 27px;
+
+/* *{border: 1px solid red;} */
+
+.about-sec .about,
+.client {
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -284,7 +285,7 @@
     border-radius: 5px;
     overflow: hidden;
     text-decoration: none;
-    box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .02);
+    box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .06);
 }
 
 .service-container {
@@ -296,7 +297,7 @@
 }
 
 .service-container a:hover {
-    box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .06);
+    box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .15);
     border-bottom: 3px solid #ff3131;
 }
 
@@ -393,9 +394,9 @@
 /* *{border: 1px solid red;} */
 
 .contact-sec {
-    height: 99vh;
+    height: 730px;
     border-top: 1px solid #959494;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
 }
 
 .contact-para>p {
@@ -449,7 +450,7 @@
 /* Media Querry */
 
 @media screen and (max-width: 1200px) {
-  
+
 
     .service-grid .service-container {
         width: 50%;
@@ -562,6 +563,7 @@
 }
 
 @media screen and (max-width: 600px) {
+
     .about h3,
     .client h3 {
         font-size: 20px;
@@ -578,6 +580,7 @@
 }
 
 @media screen and (max-width: 480px) {
+
     .content h3 {
         font-size: 30px;
     }
@@ -597,7 +600,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .services>h2{
+    .services>h2 {
         font-size: 2rem;
     }
 }

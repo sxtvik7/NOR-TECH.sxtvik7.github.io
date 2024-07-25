@@ -7,7 +7,7 @@
     padding: 0;
     font-family: sans-serif;
     font-style: normal;
-    font-weight: 400;
+    /* font-weight: 400; */
     box-sizing: border-box;
 }
 
@@ -219,52 +219,60 @@
 .about-sec,
 .services,
 .contact-sec {
-    padding-top: 75px;
+    padding: 50px 20px;
     margin-top: 40px;
-    border-top: 1px solid #959494;
+    border-top: 2px solid #959494;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about-sec>h2,
 .services>h2,
 .contact-sec>h2 {
-    margin-top: 50px;
+    margin-top: 0;
     text-align: center;
-    font-size: 3.5rem;
-    background-color: #f9f9f9;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    background-color: #d32f2f; /* Red */
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 40px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 10px 0;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);  */
+    letter-spacing: 2px;
+    padding: 20px 0;
+    margin-top: 80px;
+    border-radius: 5px;
 }
 
 .about,
 .client {
-    margin: 70px;
-}
-
-.about,
-.client li {
-    font-size: 25px;
+    margin: 40px auto;
+    max-width: 1000px;
+    text-align: left;
 }
 
 .about h3,
 .client h3 {
-    width: 90%;
-    font-size: 27px;
-    color: #131316;
+    font-size: 1.2rem;
+    color: #555;
     margin-top: 20px;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.about h3::before,
+.client h3::before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #d32f2f; /* Red */
+    margin-bottom: 10px;
+}
 
 /* *{border: 1px solid red;} */
-
-.about-sec .about,
-.client {
-    display: flex;
-    justify-content: center;
-}
 
 
 /* Services */
@@ -394,9 +402,8 @@
 /* *{border: 1px solid red;} */
 
 .contact-sec {
-    height: 730px;
+    height: 800px;
     border-top: 1px solid #959494;
-    margin-bottom: 40px;
 }
 
 .contact-para>p {
@@ -470,19 +477,6 @@
 @media screen and (max-width: 999px) {
 
 
-    .about h3,
-    .client h3 {
-        font-size: 23px;
-    }
-
-    .about h3 p {
-        font-size: 20px;
-    }
-
-    .about {
-        margin: 70px 70px 20px 70px;
-    }
-
     .client {
         margin-top: 0px;
     }
@@ -506,23 +500,17 @@
     .about-sec>h2,
     .services>h2,
     .contact-sec>h2 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
-    .about,
-    .client {
-        margin: 40px 50px;
-    }
+    
 
     .about h3,
     .client h3 {
-        font-size: 23px;
+        font-size: 1rem;
     }
 
-    .about h3 p {
-        font-size: 20px;
-    }
-
+  
 
     /* Header */
     .head {
@@ -553,31 +541,9 @@
 
     .service-grid a {
         box-shadow: 2px 2px 7px 4px rgba(32, 32, 32, .06);
-    }
-
-
-    /* Contact */
-    .contact-sec>h2 {
-        font-size: 3.5rem;
-    }
+    }  
 }
 
-@media screen and (max-width: 600px) {
-
-    .about h3,
-    .client h3 {
-        font-size: 20px;
-    }
-
-    .about h3 p {
-        font-size: 17px;
-    }
-
-    .about,
-    .client {
-        margin: 20px 30px;
-    }
-}
 
 @media screen and (max-width: 480px) {
 
@@ -589,13 +555,18 @@
         font-size: 15px;
     }
 
-    .about h3,
-    .client h3 {
-        font-size: 18px;
+    .about-sec h2 {
+        font-size: 1.5rem;
     }
 
-    .about h3 p {
-        font-size: 15px;
+    .about h3,
+    .client h3 {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .contact-sec {
+        height: 1180px;
     }
 }
 
